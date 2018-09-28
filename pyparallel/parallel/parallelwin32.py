@@ -74,6 +74,9 @@ class Parallel:
         self.ctrlRegAdr   = self.dataRegAdr + 2
         self.ctrlReg = _pyparallel.inp(self.ctrlRegAdr)
 
+    def getData(self):
+        return(_pyparallel.inp(self.dataRegAdr))
+
     def setData(self, value):
         _pyparallel.outp(self.dataRegAdr, value)
 
